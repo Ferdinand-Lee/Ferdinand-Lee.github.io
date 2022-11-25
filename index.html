@@ -1,0 +1,42 @@
+<html>
+
+<style>
+  a {
+    color: orange;
+  }
+</style>
+
+<script src="https://developer-larksuite.jpn2s.sfdc-mchho0.force.com/lightningout/lightning/lightning.out.js"></script>
+
+<div data-lightning-out="true"></div>
+
+<script>
+
+  const appName = 'c:C360';
+  const componentName = 'c:playground';
+  const lightningEndpoint = 'https://developer-larksuite.jpn2s.sfdc-mchho0.force.com/lightningout';
+  const targetElement = document.querySelector("[data-lightning-out]");
+  const componentAttributes = {
+
+  };
+
+  $Lightning.use(
+    appName,
+    function () {
+      $Lightning.createComponent(
+        componentName,
+        componentAttributes,
+        targetElement,
+        function (cmp) {
+          console.log('lightning component created');
+        }
+      );
+    },
+    lightningEndpoint
+  );
+
+
+</script>
+
+
+</html>
